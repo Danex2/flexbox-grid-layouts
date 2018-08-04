@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.flex, .box1, .box2, .box3, .box4, .box5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    height: 115px;
+    background-color: red;
+}
+
+.hero {
+    height: 250px;
+    background-color: aquamarine;
+}
+
+.med {
+    height: 250px;
+}
+
+.box1, .box2 {
+    height: 150px;
+    width: 50%;
+}
+
+
+.box1 {
+    background-color: green;
+}
+
+.box2 {
+    background-color: orangered;
+}
+
+.box3, .box4, .box5 {
+    height: 150px;
+    width: 35%;
+}
+
+.box3 {
+    background-color: teal;
+}
+
+.box4 {
+    background-color: blueviolet;
+}
+.box5 {
+    background-color: orchid;
+}
+
+.footer {
+    height: 320px;
+    background-color: wheat;
+}
+
+@media only screen and (max-width: 845px) {
+    .flex, .box1, .box2, .box3, .box4, .box5 {
+        flex-direction: column;
+        width: 100%;
+    }
+}

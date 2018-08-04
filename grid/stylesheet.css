@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+.hero {
+    grid-area: hero;
+}
+
+.content-med-right {
+    grid-area: med-r;
+}
+
+.content-med-left {
+    grid-area: med-l;
+}
+
+.content-small-left {
+    grid-area: sma-l;
+}
+
+.content-small-center {
+    grid-area: sma-c;
+}
+
+.content-small-right {
+    grid-area: sma-r;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+/* I actually like this much more */
+.container {
+    display: grid;
+    grid-template-areas:
+    'navbar navbar navbar navbar navbar navbar'
+    'hero hero hero hero hero hero'
+    'med-r med-r med-r med-l med-l med-l'
+    'sma-l sma-l sma-c sma-c sma-r sma-r'
+    'footer footer footer footer footer footer'
+}
+
+.container > div {
+    height: 100px;
+    background-color: blanchedalmond;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+/* Flexbox to center text */
+.navbar, .content-med-left, .content-med-right, .content-small-center, .content-small-left, .content-small-right, .hero, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Makes writing media queries really easy! */
+@media only screen and (max-width: 850px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+        'navbar navbar navbar navbar navbar navbar'
+        'hero hero hero hero hero hero'
+        'med-r med-r med-r med-r med-r med-r'
+        'med-l med-l med-l med-l med-l med-l'
+        'sma-l sma-l sma-c sma-c sma-r sma-r'
+        'footer footer footer footer footer footer'
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+        'navbar navbar navbar navbar navbar navbar'
+        'hero hero hero hero hero hero'
+        'med-r med-r med-r med-r med-r med-r'
+        'med-l med-l med-l med-l med-l med-l'
+        'sma-l sma-l sma-l sma-l sma-l sma-l'
+        'sma-c sma-c sma-c sma-c sma-c sma-c'
+        'sma-r sma-r sma-r sma-r sma-r sma-r'
+        'footer footer footer footer footer footer'
+    }
+}
